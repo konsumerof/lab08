@@ -8,7 +8,7 @@ jobs:
       uses: actions/checkout@v1
     - name: docker_build
       run: |
-        docker build -t print_hello_world
+        docker build -t print_hello_world .
         mkdir logs
         docker run print_hello_world > logs/log.txt
         cat logs/log.txt
