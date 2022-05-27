@@ -1,5 +1,5 @@
 FROM ubuntu:22.04
-MAINTAINER ProhorovAlexey
+MAINTAINER konsumerof
 
 RUN apt update
 RUN apt install -yy gcc g++ cmake
