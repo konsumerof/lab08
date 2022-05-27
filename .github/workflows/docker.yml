@@ -2,12 +2,13 @@ name: CI
 on: [push, pull_request]
 jobs:
  docker:
-  runs-on: linux-latest  
+  runs-on: ubuntu-latest  
   steps:
     - name: checkout
       uses: actions/checkout@v1
     - name: docker_build
       run: |
+        ./hello
         docker build -t print_hello_world .
         mkdir logs
         docker run print_hello_world > logs/log.txt
